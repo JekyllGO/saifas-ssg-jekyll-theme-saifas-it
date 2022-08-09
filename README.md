@@ -1,3 +1,3 @@
-This repository contains a boilerplate for working on creating themes for various areas. Starter theme contains a default layout, header and footer.
+This repository contains source codes of the theme in the area of SAIFAS IT
 
 To view the documentation follow the link: https://github.com/JekyllGO/saifas-ssg-jekyll-theme-boilerplate-doc
