@@ -1,0 +1,122 @@
+#modal
+  display: none
+  position: fixed
+  top: 0
+  height: 100%
+  width: 100%
+  background-color: black
+  opacity: 0.4
+  z-index: 10
+
+.modalBody
+  font-family: var(--main-font-family)
+  color: var(--text-color)
+  position: fixed
+  display: none
+  top: 10%
+  width: 100%
+  max-width: 600px
+  max-height: 700px
+  left: 50%
+  transform: translate(-50%, 0)
+  padding: 0 20px 20px 20px
+  background-color: #fff
+  border-radius: 5px
+  overflow: auto
+  z-index: 11
+
+.modal-close
+  cursor: pointer
+  position: absolute
+  right: 10px
+  top: 10px
+  -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  -moz-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), -moz-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), -o-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  -ms-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), -ms-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  -webkit-transition-delay: 0s
+  -moz-transition-delay: 0s
+  -o-transition-delay: 0s
+  -ms-transition-delay: 0s
+  transition-delay: 0s
+  -webkit-transform: translateY(0px)
+  -moz-transform: translateY(0px)
+  -o-transform: translateY(0px)
+  -ms-transform: translateY(0px)
+  transform: translateY(0px)
+  cursor: pointer
+  &:hover
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2)
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2)
+    background: rgba(200,200,200,0.2)
+    -webkit-transform: translateY(-1px)
+    -moz-transform: translateY(-1px)
+    -o-transform: translateY(-1px)
+    -ms-transform: translateY(-1px)
+    transform: translateY(-1px)
+
+.modal-headline
+  font-size: 22px !important
+
+/*Form styles*/
+
+.contact-form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+
+.form-elem__container
+  width: 100%
+  display: flex
+  flex-direction: column
+  overflow: auto
+  margin: 0 0 20px 0
+
+
+.form-elem
+  display: flex
+  flex-direction: column
+  margin: 5px
+  input, textarea, select
+    height: 36px
+    border-radius: 5px
+    border: 2px solid #f0f0f0
+    background: transparent
+    color: var(--text-color)
+    font-family: var(--main-font-family)
+    font-size: 16px
+    padding: 0 10px
+  textarea
+    padding: 10px
+    min-height: 100px
+  input:active
+    border: 2px solid var(--text-color)
+  label
+    font-weight: 600
+    margin-bottom: 3px
+
+.three-form-elements
+  display: grid
+  grid-template-columns: 33.3% 33.3% 33.3%
+  .form-elem
+    display: flex
+
+.two-form-elements
+  display: grid
+  grid-template-columns: 50% 50%
+  .form-elem
+    display: flex
+
+.form-radio-buttons-container
+  display: flex
+  align-items: center
+  input
+    margin-right: 4px
+  .radio-button-text
+    margin-right: 10px
+
+.form-current-page
+  display: none

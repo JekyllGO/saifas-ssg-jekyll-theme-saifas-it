@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card__top-section">
+    <div class="top-section__icon">
+      <img src="{{ include.image }}" alt="">
+    </div>
+    <div class="top-section__title">
+      {{ include.title }}
+      <div class="top-section__description">
+        <img src="{{ include.icon }}" alt="">
+        {{ include.shortDescription }}
+      </div>
+    </div>
+  </div>
+  <div class="card__main-section">
+    <div class="main-section__description">
+      {{ include.description }}
+    </div>
+  </div>
+  {% if include.type == 'product' %}
+    <div class="card__buttons-section">
+      <a class="btn" href="{{ include.detailsLink }}">Details</a>
+      <a target="_blank" class="btn btn--purchase disabled" href="">Purchase</a>
+    </div>
+  {% elsif include.type == 'report' %}
+    <div class="card__buttons-section--report">
+      <div class="buttons-section__top">
+        <a class="btn" href="{{ include.detailsLink }}">Details</a>
+      </div>
+      <div class="buttons-section__bottom">
+        <a class="btn" href="{{ include.embeddedLink }}">Embedded</a>
+        <a class="btn" href="{{ include.publishedLink }}">Published</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
