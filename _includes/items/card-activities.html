@@ -1,0 +1,9 @@
+{::nomarkdown}
+<a href="{{ include.link }}" class="card-activities">
+  {{ include.title }}
+  {% if include.icon %}
+    <i class="{{ include.iconClass }}"></i>
+  {% endif %}
+  <div class="card-activities__tags">{{ include.tagsText }}</div>
+</a>
+{:/nomarkdown}
