@@ -1,5 +1,9 @@
 <header>
-  {% include page/header/logo.html %}
-  {% include plugins/breadcrumbs.html %}
-  {% include page/header/navigation.html %}
+  <div style="display: flex;">
+    {% include page/header/logo.html %}
+    {% include plugins/breadcrumbs.html %}
+  </div>
+  {% unless page.withoutNav %}
+    {% include page/header/navigation.html %}
+  {% endunless %}
 </header>

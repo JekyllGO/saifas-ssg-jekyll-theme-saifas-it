@@ -1,0 +1,38 @@
+<div class="details__top">
+  <div class="details__top-image">
+    <img src="{{ include.imageUrl }}" >
+  </div>
+  <div class="details__top-text">
+    <div class="details__top-title">
+      {{ include.title }}
+    </div>
+    <div class="details__top-description">
+      <img src="{{ include.icon }}" alt="">
+        {{ include.detailsType }}
+    </div>
+    <div class="details__top-cost">
+      Pricing
+      <div class="cost">
+        {{ include.cost }}
+      </div>
+    </div>
+    <button class="get-it-now-button btn">Get it now</button>
+  </div>
+  <div class="details__top-buttons">
+    <a target="_blank" class="btn" href="{{ page.issuesLink }}">Issues</a>
+    <a class='btn' href='./reports'>Reports</a>
+    <a class='btn btn--purchase disabled' href=''>Purchase</a>
+  </div>
+</div>
+<div class="details-bottom__description">
+  {% for description in include.description %}
+    <div class="description__title">
+      {{description.title}}
+    </div>
+    <ul>
+      {% for li in description.list-items %}
+        <li>{{li.text}}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
