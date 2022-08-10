@@ -10,20 +10,38 @@
       <img src="{{ include.icon }}" alt="">
         {{ include.cardType }}
     </div>
-    <div class="details__top-cost">
-      Pricing
-      <div class="cost">
-        {{ include.cost }}
+    {% if include.cost %}
+      <div class="details__top-cost">
+        Pricing
+        <div class="cost">
+          {{ include.cost }}
+        </div>
       </div>
-    </div>
-    <button class="get-it-now-button btn">Get it now</button>
+    {% endif %}
+    {% if include.type == 'product' %}
+      <button class="get-it-now-button btn">Get it now</button>
+    {% endif %}
   </div>
   <div class="details__top-buttons">
-    <a target="_blank" class="btn" href="{{ page.issuesLink }}">Issues</a>
-    <a class='btn' href='./reports'>Reports</a>
-    <a class='btn btn--purchase disabled' href=''>Purchase</a>
+    {% if include.type == 'product' %}
+      <a target="_blank" class="btn" href="{{ page.issuesLink }}">Issues</a>
+      <a class='btn' href='./reports'>Reports</a>
+      <a class='btn btn--purchase disabled' href=''>Purchase</a>
+    {% elsif include.type == 'report' %}
+      <a class="btn" href="{{ include.embeddedLink }}">Embedded</a>
+      <a class='btn' href='{{ include.publishedLink }}'>Published</a>
+    {% endif %}
   </div>
 </div>
+{% if include.type == 'report' %}
+  <div id="lightgallery">
+    {% for img in include.images %}
+      <a href="{{ img.url }}">
+        <img src="{{ img.url }}" />
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
 <div class="details-bottom__description">
   {% for description in include.description %}
     <div class="description__title">
