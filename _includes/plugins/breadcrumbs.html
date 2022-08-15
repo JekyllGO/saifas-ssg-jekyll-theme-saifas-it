@@ -1,6 +1,10 @@
 <div style="display: flex; align-items: center; margin-left: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis" id="breadcrumbs">
-{% assign crumbs = page.breadcrumbs-title %}
-{% for crumb in crumbs offset: 1 %}
-  > <a href="{{ page.permalink }}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
-{% endfor %}
-</div>
+  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+  {% for crumb in crumbs offset: 1 %}
+    {% if forloop.last %}
+      > <a style="margin: 0 10px;" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ page.breadcrumbs-title }}</a>
+    {% else %}
+      > <a style="margin: 0 10px;" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+    {% endif %}
+  {% endfor %}
+  </div>
