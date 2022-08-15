@@ -1,0 +1,5 @@
+{% if include.href %}
+  <a class="btn" href="{{ include.href }}" onclick="{{ include.onclick }}">{{ include.text }}</a>
+{% else %}
+  <a class="btn" onclick="{{ include.onclick }}">{{ include.text }}</a>
+{% endif %}

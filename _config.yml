@@ -2,7 +2,7 @@ title: Jekyll theme SAIFAS IT
 author:
   name: SAIFAS
 copyright: © SAIFAS
-version: 0.1.5
+version: 0.1.6
 lang: en_US
 author: SAIFAS
 email: jekyll@saifas.info
@@ -15,28 +15,3 @@ sass:
 
 assets_root_path: /assets/
 assets_styles_path: /assets/sass/styles.css
-
-layout: 
-  header:
-    logo:
-      path: 
-    links:
-      -
-        title: Home
-        url: /
-  footer:
-    contact_us: true
-    form_url:
-    socials:
-      - 
-        name: github
-        url: /
-      -
-        name: facebook
-        url: /
-      -
-        name: linkedin
-        url: /
-      -
-        name: twitter
-        url: /
