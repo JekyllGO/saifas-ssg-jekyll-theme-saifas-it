@@ -1,3 +1,5 @@
-This repository contains source codes of the theme in the area of SAIFAS IT
+# SAIFAS Jekyll theme IT
 
-To view the documentation follow the link: https://github.com/JekyllGO/saifas-ssg-jekyll-theme-saifas-it-doc
+#jekyll-theme-saifas-it
+
+[Theme IT Documentation](https://github.com/JekyllGO/saifas-ssg-jekyll-theme-saifas-it-doc)
