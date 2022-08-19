@@ -1,5 +1,5 @@
 # SAIFAS Jekyll theme IT
 
-#jekyll-theme-saifas-it
+#jekyll-theme-it
 
-[Theme IT Documentation](https://github.com/JekyllGO/saifas-ssg-jekyll-theme-saifas-it-doc)
+[ Documentation](https://github.com/JekyllGO/saifas-ssg-jekyll-theme-saifas-it-doc)
